@@ -1,5 +1,6 @@
 import react, { useState } from "react"
 import HandleChange from "../ts/handleChange"
+import "../css/board.css"
 
 const Board = () => {
     const [board, setBoard] = useState({
@@ -16,7 +17,6 @@ const Board = () => {
         isWhite: true,
         isPointed: false,
     })
-    console.log(board)
     return (
         <table>
             <tbody>
