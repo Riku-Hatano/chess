@@ -63,6 +63,60 @@ const Pieces = {
         isEnPassant: false, //アンパッサン
         isPromoted: false, //プロモーション
     },
+    bP2: {
+        move: "pawn",
+        isSelected: false,
+        isChecked: false,
+        isTaken: false,
+        isMoved: false, //2マス
+        isEnPassant: false, //アンパッサン
+        isPromoted: false, //プロモーション
+    },
+    bP3: {
+        move: "pawn",
+        isSelected: false,
+        isChecked: false,
+        isTaken: false,
+        isMoved: false, //2マス
+        isEnPassant: false, //アンパッサン
+        isPromoted: false, //プロモーション
+    },
+    bP4: {
+        move: "pawn",
+        isSelected: false,
+        isChecked: false,
+        isTaken: false,
+        isMoved: false, //2マス
+        isEnPassant: false, //アンパッサン
+        isPromoted: false, //プロモーション
+    },
+    bP5: {
+        move: "pawn",
+        isSelected: false,
+        isChecked: false,
+        isTaken: false,
+        isMoved: false, //2マス
+        isEnPassant: false, //アンパッサン
+        isPromoted: false, //プロモーション
+    },
+    bP6: {
+        move: "pawn",
+        isSelected: false,
+        isChecked: false,
+        isTaken: false,
+        isMoved: false, //2マス
+        isEnPassant: false, //アンパッサン
+        isPromoted: false, //プロモーション
+    },
+    bP7: {
+        move: "pawn",
+        isSelected: false,
+        isChecked: false,
+        isTaken: false,
+        isMoved: false, //2マス
+        isEnPassant: false, //アンパッサン
+        isPromoted: false, //プロモーション
+    },
     //白のポーン、黒はこれからやる
 }
 
