@@ -7,7 +7,6 @@ const App = () => {
   return (
     <section>
       <Board />
-      <div>board</div>
     </section>
   );
 }
