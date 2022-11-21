@@ -21,14 +21,14 @@ const Board = () => {
         <table>
             <tbody>
                 <tr>
-                    <td onClick={() => HandleChange(board.board[0][0], 0, 1, board.board,setBoard, board)}>{board.board[0][0]}</td>
-                    <td onClick={() => HandleChange(board.board[0][1], 0, 2, board.board,setBoard, board)}>{board.board[0][1]}</td>
-                    <td onClick={() => HandleChange(board.board[0][2], 0, 3, board.board,setBoard, board)}>{board.board[0][2]}</td>
-                    <td onClick={() => HandleChange(board.board[0][3], 0, 4, board.board,setBoard, board)}>{board.board[0][3]}</td>
-                    <td onClick={() => HandleChange(board.board[0][4], 0, 5, board.board,setBoard, board)}>{board.board[0][4]}</td>
-                    <td onClick={() => HandleChange(board.board[0][5], 0, 6, board.board,setBoard, board)}>{board.board[0][5]}</td>
-                    <td onClick={() => HandleChange(board.board[0][6], 0, 7, board.board,setBoard, board)}>{board.board[0][6]}</td>
-                    <td onClick={() => HandleChange(board.board[0][7], 0, 8, board.board,setBoard, board)}>{board.board[0][7]}</td>
+                    <td onClick={() => HandleChange(board.board[0][0], 0, 0, board.board,setBoard, board)}>{board.board[0][0]}</td>
+                    <td onClick={() => HandleChange(board.board[0][1], 0, 1, board.board,setBoard, board)}>{board.board[0][1]}</td>
+                    <td onClick={() => HandleChange(board.board[0][2], 0, 2, board.board,setBoard, board)}>{board.board[0][2]}</td>
+                    <td onClick={() => HandleChange(board.board[0][3], 0, 3, board.board,setBoard, board)}>{board.board[0][3]}</td>
+                    <td onClick={() => HandleChange(board.board[0][4], 0, 4, board.board,setBoard, board)}>{board.board[0][4]}</td>
+                    <td onClick={() => HandleChange(board.board[0][5], 0, 5, board.board,setBoard, board)}>{board.board[0][5]}</td>
+                    <td onClick={() => HandleChange(board.board[0][6], 0, 6, board.board,setBoard, board)}>{board.board[0][6]}</td>
+                    <td onClick={() => HandleChange(board.board[0][7], 0, 7, board.board,setBoard, board)}>{board.board[0][7]}</td>
                 </tr>
                 <tr>
                     <td onClick={() => HandleChange(board.board[1][0], 1, 0, board.board,setBoard, board)}>{board.board[1][0]}</td>
