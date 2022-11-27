@@ -1,8 +1,10 @@
 import react from "react"
-import { HighlightSpanKind } from "typescript";
+import { HighlightSpanKind, PollingWatchKind } from "typescript";
+import { Pawn, Knight, Rook, Bishop, Queen, King } from "./moves";
 
 class Pieces {
-    move: string;
+    // name: string;
+    kind: string;
     isSelected: boolean;
     isChecked: boolean; 
     isTaken: boolean;
@@ -11,8 +13,10 @@ class Pieces {
     isMoved: boolean;
     isEnpassaint: boolean;
     isPromoted: boolean;
-    constructor (move: string, isSelected: boolean, isChecked: boolean, isTaken: boolean, isCastled: boolean, canCastled: boolean, isMoved: boolean, isEnpassaint: boolean, isPromoted: boolean) {
-        this.move = move;
+    constructor (kind: string, isSelected: boolean, isChecked: boolean, isTaken: boolean, isCastled: boolean, canCastled: boolean, isMoved: boolean, isEnpassaint: boolean, isPromoted: boolean) {
+    // constructor (name: string, kind: string, isSelected: boolean, isChecked: boolean, isTaken: boolean, isCastled: boolean, canCastled: boolean, isMoved: boolean, isEnpassaint: boolean, isPromoted: boolean) {
+        // this.name = name;
+        this.kind = kind;
         this.isSelected = isSelected;
         this.isChecked = isChecked;
         this.isTaken = isTaken;
@@ -21,12 +25,31 @@ class Pieces {
         this.isMoved = isMoved;
         this.isEnpassaint = isEnpassaint;
         this.isPromoted = isPromoted;
-    }
-}
 
-const br1 = new Pieces("rook", false, false, false, false, false, false, false, false)
-const br2 = new Pieces("rook", false, false, false, false, false, false, false, false)
-const bp1 = new Pieces("pawn", false, false, false, false, false, false, false, false)
+        function a(kind: string) {
+            if(kind === " ") {
+                console.log("no piece")
+            } else if(kind.indexOf("P") !== -1) {
+                Pawn();
+            } else if(kind.indexOf("N") !== -1) {
+                Knight();
+            } else if(kind.indexOf("R") !== -1) {
+                Rook();
+            } else if(kind.indexOf("BB" || "WB") !== -1) {
+                Bishop();
+            } else if(kind.indexOf("Q") !== -1) {
+                Queen();
+            } else if(kind.indexOf("K") !== -1) {
+                King();
+            } else {
+                console.log("error")
+            }
+        }
+
+        a(this.kind)
+    }
+
+}
 
 // class Pieces {
 //     move: string;
