@@ -1,26 +1,40 @@
 import react from "react"
 import Pieces from "../ts/pieces";
+import { Pawn, Knight, Rook, Bishop, Queen, King } from "../ts/moves";
 
 const HandleChange = (piece: string, column: number, row: number, props2: string[][], props3: react.Dispatch<react.SetStateAction<any>>, props4: any) => {
-// const HandleChange = (name: string, piece: string, column: number, row: number, props2: string[][], props3: react.Dispatch<react.SetStateAction<any>>, props4: any) => {
-    // console.log("piece: " + piece)
-    // console.log("props2: " + props2)
-    // console.log("column: " + column)
-    // console.log("row: " + row)
-   
+    if (props4.board[column][row] === " ") {
+        console.log("nothing")
+        return
+    } else if(piece === " ") {
+        console.log("no piece")
+    } else if(piece.indexOf("P") !== -1) {
+        Pawn(column, row, piece);
+    } else if(piece.indexOf("N") !== -1) {
+        Knight(column, row, piece);
+    } else if(piece.indexOf("R") !== -1) {
+        Rook(column, row, piece);
+    } else if(piece.indexOf("BB" || "WB") !== -1) {
+        Bishop(column, row, piece);
+    } else if(piece.indexOf("Q") !== -1) {
+        Queen(column, row, piece);
+    } else if(piece.indexOf("K") !== -1) {
+        King(column, row, piece);
+    } else {
+        console.log("error")
+    }
+
+
+
     // let a = document.getElementById(String(column) + String(row)) as HTMLTableElement;
     // a.classList.add("red");
     //hoverの方がclassセレクタよりも強いため、background-colorを設定しても反映されない
-
-
-
-
-
-    let piece1 = new Pieces(piece, false, false, false, false, false, false, false, false)
-    // let piece1 = new Pieces("riku", piece, false, false, false, false, false, false, false, false)
+    
     props3 ({
         ...props4,
+        isClicked: !props4.isClicked,
     })
+    // console.log(!props4.isClicked)
 }
 
 export default HandleChange;

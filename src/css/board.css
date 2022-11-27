@@ -40,7 +40,6 @@ tr:nth-child(even) td:nth-child(odd) {
     background-color: black;
     color: white;
     text-align: center;
-    transition: .4s;
 }
 
 tr:nth-child(even) td:nth-child(even),
@@ -48,7 +47,6 @@ tr:nth-child(odd) td:nth-child(odd) {
     background-color: white;
     color: black;
     text-align: center;
-    transition: .1s;
 }
 
 tr:nth-child(odd) td:nth-child(even):hover,
@@ -60,8 +58,8 @@ tr:nth-child(odd) td:nth-child(odd):hover {
 }
 
 .red {
-    outline: 1px solid red;
-    outline-offset: -2px;
+    outline: 5px solid red;
+    outline-offset: -5px;
 }
 
 
