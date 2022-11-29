@@ -52,24 +52,32 @@ export let packageP = [
 export let packageR = [
     new Pieces("BR0", false, false, false, false, false, false, false, false),
     new Pieces("BR1", false, false, false, false, false, false, false, false),
+    new Pieces("WR0", false, false, false, false, false, false, false, false),
+    new Pieces("WR1", false, false, false, false, false, false, false, false),
 ]
  
 export let packageN = [
     new Pieces("BN0", false, false, false, false, false, false, false, false),
     new Pieces("BN1", false, false, false, false, false, false, false, false),
+    new Pieces("WN0", false, false, false, false, false, false, false, false),
+    new Pieces("WN1", false, false, false, false, false, false, false, false),
 ]
 
 export let packageB = [
     new Pieces("BB0", false, false, false, false, false, false, false, false),
     new Pieces("BB1", false, false, false, false, false, false, false, false),
+    new Pieces("WB0", false, false, false, false, false, false, false, false),
+    new Pieces("WB1", false, false, false, false, false, false, false, false),
 ]
 
 export let packageQ = [
     new Pieces("BQ0", false, false, false, false, false, false, false, false),
+    new Pieces("WQ0", false, false, false, false, false, false, false, false),
 ]
 
 export let packageK = [
     new Pieces("BK0", false, false, false, false, false, false, false, false),
+    new Pieces("WK0", false, false, false, false, false, false, false, false),
 ]
 // export let packageP = [
 //     new Pieces(0, 1, "BP0", false, false, false, false, false, false, false, false),

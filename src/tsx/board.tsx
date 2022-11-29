@@ -14,6 +14,7 @@ const Board = () => {
             ["WP0", "WP1", "WP2", "WP3", "WP4", "WP5", "WP6", "WP7"],
             ["WR0", "WN0", "WB0", "WQ0", "WK", "WB1", "WN1", "WR1"]
         ],
+        changable: [],
         isClicked: false,
         isWhite: true,
         isPointed: false,
