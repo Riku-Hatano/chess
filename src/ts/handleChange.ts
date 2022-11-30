@@ -18,7 +18,7 @@ const HandleChange = (piece: string, column: number, row: number, props2: string
             ...props4,
             isClicked: !props4.isClicked,
         })
-        console.log(!props4.isClicked)
+        // console.log(!props4.isClicked)
         return
     }
 
