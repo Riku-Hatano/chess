@@ -1,6 +1,7 @@
 import react from "react";
 import { isConstructorDeclaration } from "typescript";
-import { packageP } from "./pieces";
+import { packageBQ, packageBP, packageWP, packageWQ } from "./pieces";
+import Pieces from "./pieces";
 
 export const cellChanger = (name: string, column: number, row: number, tmpChangeCellBox: string[], props3: react.Dispatch<react.SetStateAction<any>>, props4: any) => {
     console.log(tmpChangeCellBox)
@@ -14,13 +15,26 @@ export const cellChanger = (name: string, column: number, row: number, tmpChange
             oldBoard[oldPlaceColumn][oldPlaceRow] = " "
             oldBoard[column][row] = tmpChangeCellBox[max - 1]
 
-            for (let i = 0 ; i < packageP.length ; i++) {
-                if (packageP[i].name === tmpChangeCellBox[max - 1]) {
-                    packageP[i].isSelected = true;
-                    packageP[i].isMoved = true;
-                    console.log(packageP[i])
+            for (let i = 0 ; i < packageBP.length ; i++) {
+                if (packageBP[i].name === tmpChangeCellBox[max - 1]) {
+                    packageBP[i].isSelected = true;
+                    packageBP[i].isMoved = true;
+                    console.log(packageBP[i])
                 }
             }
+            //promotion
+            if (tmpChangeCellBox[max - 1].indexOf("BP") !== -1 && column === 7) {
+                packageBQ.push(new Pieces("BQ" + packageBQ.length, false, false, false, false, false, false, false, false))
+                console.log(packageBQ)
+                console.log(packageBQ.length)
+                for (let i = 0 ; i < packageBP.length ; i++) {
+                    if (packageBP[i].name === name) {
+                        packageBP.splice(i, 1);
+                    }
+                }
+                oldBoard[column][row] = packageBQ[packageBQ.length - 1].name;
+            }
+            //promotion end
             props3({
                 ...props4,
                 board: oldBoard,

@@ -1,12 +1,12 @@
 import react from "react";
-import { packageP } from "./pieces"
+import { packageWP, packageBP } from "./pieces"
 
 export const pieceStateChanger = (name: string) => {
-    for (let i = 0 ; i < packageP.length ; i++) {
-        if (packageP[i].name === name) {
-            packageP[i].isSelected = true;
-            console.log(packageP[i])
-            return packageP[i]
+    for (let i = 0 ; i < packageBP.length ; i++) {
+        if (packageBP[i].name === name) {
+            packageBP[i].isSelected = true;
+            console.log(packageBP[i])
+            return packageBP[i]
         }
     }
 }
