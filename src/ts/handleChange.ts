@@ -23,9 +23,9 @@ const HandleChange = (piece: string, column: number, row: number, props2: string
     }
 
     if (piece.indexOf("P") !== -1) {
-        tmpCell = Pawn(column, row, piece, props3, props4);
+        tmpCell = Pawn(column, row, piece, props3, props4); //Pawn in included in moves.ts
     } else if (piece.indexOf("N") !== -1) {
-        Knight(column, row, piece);
+        tmpCell = Knight(column, row, piece, props3, props4); //Knight is included moves.ts
     } else if (piece.indexOf("R") !== -1) {
         Rook(column, row, piece);
     } else if (piece.indexOf("BB" || "WB") !== -1) {
