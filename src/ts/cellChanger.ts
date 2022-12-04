@@ -14,7 +14,6 @@ export const cellChanger = (name: string, column: number, row: number, tmpChange
             oldBoard[oldPlaceColumn][oldPlaceRow] = " "
             oldBoard[column][row] = tmpChangeCellBox[max - 1]
 
-
             for (let i = 0 ; i < packageP.length ; i++) {
                 if (packageP[i].name === tmpChangeCellBox[max - 1]) {
                     packageP[i].isSelected = true;
@@ -24,7 +23,7 @@ export const cellChanger = (name: string, column: number, row: number, tmpChange
             }
             props3({
                 ...props4,
-                board: oldBoard
+                board: oldBoard,
             })
         }
         console.log(tmpChangeCellBox[max - 1])
