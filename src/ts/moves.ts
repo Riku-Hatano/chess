@@ -1,5 +1,6 @@
 import react from "react";
 import { isConditionalExpression } from "typescript";
+import { KnightMove } from "./each_moves/knight";
 import { PawnMove } from "./each_moves/pawn";
 // import { packageP, packageR, packageN, packageB, packageK, packageQ } from "./pieces";
 
@@ -7,8 +8,8 @@ export const Pawn = (column: number, row: number, name: string, props3: react.Di
     return PawnMove(column, row, name, props3, props4)
 }
 
-export const Knight = (column: number, row: number, piece: string) => {
-    console.log("knight")
+export const Knight = (column: number, row: number, name: string, props3: react.Dispatch<react.SetStateAction<any>>, props4: any): string[] => {
+    return KnightMove(column, row, name, props3, props4)
 }
 
 export const Rook = (column: number, row: number, piece: string) => {
