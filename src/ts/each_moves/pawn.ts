@@ -1,5 +1,5 @@
 import react from "react"
-import { packageP } from "../pieces"
+import { packageWP, packageBP } from "../pieces"
 import { pieceStateChanger } from "../pieceStateChanger"
 
 let tmpChangeCellBox: string[];

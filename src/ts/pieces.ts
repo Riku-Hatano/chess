@@ -25,15 +25,7 @@ class Pieces {
     }
 }
 
-export let packageP = [
-    new Pieces("BP0", false, false, false, false, false, false, false, false),
-    new Pieces("BP1", false, false, false, false, false, false, false, false),
-    new Pieces("BP2", false, false, false, false, false, false, false, false),
-    new Pieces("BP3", false, false, false, false, false, false, false, false),
-    new Pieces("BP4", false, false, false, false, false, false, false, false),
-    new Pieces("BP5", false, false, false, false, false, false, false, false),
-    new Pieces("BP6", false, false, false, false, false, false, false, false),
-    new Pieces("BP7", false, false, false, false, false, false, false, false),
+export let packageWP = [
     new Pieces("WP0", false, false, false, false, false, false, false, false),
     new Pieces("WP1", false, false, false, false, false, false, false, false),
     new Pieces("WP2", false, false, false, false, false, false, false, false),
@@ -44,35 +36,61 @@ export let packageP = [
     new Pieces("WP7", false, false, false, false, false, false, false, false),
 ];
 
-export let packageR = [
-    new Pieces("BR0", false, false, false, false, false, false, false, false),
-    new Pieces("BR1", false, false, false, false, false, false, false, false),
+export let packageWR = [
     new Pieces("WR0", false, false, false, false, false, false, false, false),
     new Pieces("WR1", false, false, false, false, false, false, false, false),
 ]
  
-export let packageN = [
-    new Pieces("BN0", false, false, false, false, false, false, false, false),
-    new Pieces("BN1", false, false, false, false, false, false, false, false),
+export let packageWN = [
     new Pieces("WN0", false, false, false, false, false, false, false, false),
     new Pieces("WN1", false, false, false, false, false, false, false, false),
 ]
 
-export let packageB = [
-    new Pieces("BB0", false, false, false, false, false, false, false, false),
-    new Pieces("BB1", false, false, false, false, false, false, false, false),
+export let packageWB = [
     new Pieces("WB0", false, false, false, false, false, false, false, false),
     new Pieces("WB1", false, false, false, false, false, false, false, false),
 ]
 
-export let packageQ = [
-    new Pieces("BQ0", false, false, false, false, false, false, false, false),
+export let packageWQ = [
     new Pieces("WQ0", false, false, false, false, false, false, false, false),
 ]
 
-export let packageK = [
-    new Pieces("BK0", false, false, false, false, false, false, false, false),
+export let packageWK = [
     new Pieces("WK0", false, false, false, false, false, false, false, false),
+]
+
+export let packageBP = [
+    new Pieces("BP0", false, false, false, false, false, false, false, false),
+    new Pieces("BP1", false, false, false, false, false, false, false, false),
+    new Pieces("BP2", false, false, false, false, false, false, false, false),
+    new Pieces("BP3", false, false, false, false, false, false, false, false),
+    new Pieces("BP4", false, false, false, false, false, false, false, false),
+    new Pieces("BP5", false, false, false, false, false, false, false, false),
+    new Pieces("BP6", false, false, false, false, false, false, false, false),
+    new Pieces("BP7", false, false, false, false, false, false, false, false),
+];
+
+export let packageBR = [
+    new Pieces("BR0", false, false, false, false, false, false, false, false),
+    new Pieces("BR1", false, false, false, false, false, false, false, false),
+]
+ 
+export let packageBN = [
+    new Pieces("BN0", false, false, false, false, false, false, false, false),
+    new Pieces("BN1", false, false, false, false, false, false, false, false),
+]
+
+export let packageBB = [
+    new Pieces("BB0", false, false, false, false, false, false, false, false),
+    new Pieces("BB1", false, false, false, false, false, false, false, false),
+]
+
+export let packageBQ = [
+    new Pieces("BQ0", false, false, false, false, false, false, false, false),
+]
+
+export let packageBK = [
+    new Pieces("BK0", false, false, false, false, false, false, false, false),
 ]
 
 
