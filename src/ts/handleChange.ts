@@ -28,8 +28,9 @@ const HandleChange = (piece: string, column: number, row: number, props2: string
         tmpCell = Knight(column, row, piece, props3, props4); //Knight is included moves.ts
     } else if (piece.indexOf("R") !== -1) {
         Rook(column, row, piece);
-    } else if (piece.indexOf("BB" || "WB") !== -1) {
-        Bishop(column, row, piece);
+    } else if (piece[1] === "B") {
+    // } else if (piece.indexOf("BB" || "WB") !== -1) {
+        tmpCell = Bishop(column, row, piece, props3, props4);
     } else if (piece.indexOf("Q") !== -1) {
         Queen(column, row, piece);
     } else if (piece.indexOf("K") !== -1) {
