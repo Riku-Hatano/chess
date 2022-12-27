@@ -22,18 +22,17 @@ const HandleChange = (piece: string, column: number, row: number, props2: string
         return
     }
 
-    if (piece.indexOf("P") !== -1) {
+    if (piece[1] === "P") {
         tmpCell = Pawn(column, row, piece, props3, props4); //Pawn in included in moves.ts
-    } else if (piece.indexOf("N") !== -1) {
+    } else if (piece[1] === "N") {
         tmpCell = Knight(column, row, piece, props3, props4); //Knight is included moves.ts
-    } else if (piece.indexOf("R") !== -1) {
+    } else if (piece[1] === "R") {
         Rook(column, row, piece);
     } else if (piece[1] === "B") {
-    // } else if (piece.indexOf("BB" || "WB") !== -1) {
         tmpCell = Bishop(column, row, piece, props3, props4);
-    } else if (piece.indexOf("Q") !== -1) {
+    } else if (piece[1] === "Q") {
         Queen(column, row, piece);
-    } else if (piece.indexOf("K") !== -1) {
+    } else if (piece[1] === "K") {
         King(column, row, piece);
     } else {
         console.log("error")

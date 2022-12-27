@@ -13,33 +13,42 @@ export const BishopMove = (column: number, row: number, name: string, props3: re
                 case 0:
                     //左上
                     (column < row) ? run = column : run = row
-                    console.log(`左上: ${run}`)
+                    // console.log(`左上: ${run}`)
                     for (let i = 1 ; i <= run ; i++) {
+                        if (document.getElementById(String(column - i) + String(row - i))?.innerHTML[0] === "B") { break; }
                         tmpChangeCellBox.push(String(column - i) + String(row - i))
+                        if (document.getElementById(String(column - i) + String(row - i))?.innerHTML[0] === "W") { break; }
                     }
                     break;
                 case 1: 
                     //右上
                     (column < 7 - row) ? run = column : run = (7 - row)
-                    console.log(`右上: ${run}`)
+                    // console.log(`右上: ${run}`)
                     for (let i = 1 ; i <= run ; i++) {
+                        if (document.getElementById(String(column - i) + String(row + i))?.innerHTML[0] === "B") { break; }
                         tmpChangeCellBox.push(String(column - i) + String(row + i))
+                        if (document.getElementById(String(column - i) + String(row + i))?.innerHTML[0] === "W") { break; }
+
                     }
                     break;
                 case 2:
                     //左下
                     (7 - column < row) ? run = (7 - column) : run = row
-                    console.log(`左下: ${run}`)
+                    // console.log(`左下: ${run}`)
                     for (let i = 1 ; i <= run ; i++) {
+                        if (document.getElementById(String(column + i) + String(row - i))?.innerHTML[0] === "B") { break; }
                         tmpChangeCellBox.push(String(column + i) + String(row - i))
+                        if (document.getElementById(String(column + i) + String(row - i))?.innerHTML[0] === "W") { break; }
                     }
                     break;
                 case 3:
                     //右下
                     (7 - column < 7 - row) ? run = (7 - column) : run = (7 - row)
-                    console.log(`右下: ${run}`)
+                    // console.log(`右下: ${run}`)
                     for (let i = 1 ; i <= run ; i++) {
+                        if (document.getElementById(String(column + i) + String(row + i))?.innerHTML[0] === "B") { break; }
                         tmpChangeCellBox.push(String(column + i) + String(row + i))
+                        if (document.getElementById(String(column + i) + String(row + i))?.innerHTML[0] === "W") { break; }
                     }
                     break;
                 default:
@@ -53,40 +62,47 @@ export const BishopMove = (column: number, row: number, name: string, props3: re
                 case 0:
                     //左上
                     (column < row) ? run = column : run = row
-                    console.log(`左上: ${run}`)
+                    // console.log(`左上: ${run}`)
                     for (let i = 1 ; i <= run ; i++) {
+                        if (document.getElementById(String(column - i) + String(row - i))?.innerHTML[0] == "W") { break; }
                         tmpChangeCellBox.push(String(column - i) + String(row - i))
+                        if (document.getElementById(String(column - i) + String(row - i))?.innerHTML[0] == "B") { break; }
                     }
                     break;
                 case 1: 
                     //右上
                     (column < 7 - row) ? run = column : run = (7 - row)
-                    console.log(`右上: ${run}`)
+                    // console.log(`右上: ${run}`)
                     for (let i = 1 ; i <= run ; i++) {
+                        if (document.getElementById(String(column - i) + String(row + i))?.innerHTML[0] == "W") { break; }
                         tmpChangeCellBox.push(String(column - i) + String(row + i))
+                        if (document.getElementById(String(column - i) + String(row + i))?.innerHTML[0] == "B") { break; }
                     }
                     break;
                 case 2:
                     //左下
                     (7 - column < row) ? run = (7 - column) : run = row
-                    console.log(`左下: ${run}`)
+                    // console.log(`左下: ${run}`)
                     for (let i = 1 ; i <= run ; i++) {
+                        if (document.getElementById(String(column + i) + String(row - i))?.innerHTML[0] == "W") { break; }
                         tmpChangeCellBox.push(String(column + i) + String(row - i))
+                        if (document.getElementById(String(column + i) + String(row - i))?.innerHTML[0] == "B") { break; }
                     }
                     break;
                 case 3:
                     //右下
                     (7 - column < 7 - row) ? run = (7 - column) : run = (7 - row)
-                    console.log(`右下: ${run}`)
+                    // console.log(`右下: ${run}`)
                     for (let i = 1 ; i <= run ; i++) {
+                        if (document.getElementById(String(column + i) + String(row + i))?.innerHTML[0] == "W") { break; }
                         tmpChangeCellBox.push(String(column + i) + String(row + i))
+                        if (document.getElementById(String(column + i) + String(row + i))?.innerHTML[0] == "B") { break; }
                     }
                     break;
                 default:
                     console.log("error, you called function more than correct times.")
             }
         }
-        
     }
     for (let i = 0 ; i < tmpChangeCellBox.length ; i++) {
         let color = document.getElementById(tmpChangeCellBox[i]) as HTMLTableElement
