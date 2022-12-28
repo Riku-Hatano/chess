@@ -27,7 +27,7 @@ const HandleChange = (piece: string, column: number, row: number, props2: string
     } else if (piece[1] === "N") {
         tmpCell = Knight(column, row, piece, props3, props4); //Knight is included moves.ts
     } else if (piece[1] === "R") {
-        Rook(column, row, piece);
+        tmpCell = Rook(column, row, piece, props3, props4);
     } else if (piece[1] === "B") {
         tmpCell = Bishop(column, row, piece, props3, props4);
     } else if (piece[1] === "Q") {
