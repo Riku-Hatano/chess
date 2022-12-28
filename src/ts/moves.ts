@@ -6,10 +6,12 @@ import { PawnMove } from "./each_moves/pawn";
 // import { packageP, packageR, packageN, packageB, packageK, packageQ } from "./pieces";
 
 export const Pawn = (column: number, row: number, name: string, props3: react.Dispatch<react.SetStateAction<any>>, props4: any): string[] => {
+    console.log(PawnMove(column, row, name, props3, props4))
     return PawnMove(column, row, name, props3, props4)
 }
 
 export const Knight = (column: number, row: number, name: string, props3: react.Dispatch<react.SetStateAction<any>>, props4: any): string[] => {
+    console.log(KnightMove(column, row, name, props3, props4))
     return KnightMove(column, row, name, props3, props4)
 }
 
@@ -18,6 +20,7 @@ export const Rook = (column: number, row: number, piece: string) => {
 }
 
 export const Bishop = (column: number, row: number, name: string, props3: react.Dispatch<react.SetStateAction<any>>, props4: any): string[] => {
+    console.log(BishopMove(column, row, name, props3, props4))
     return BishopMove(column, row, name, props3, props4)
 }
 
