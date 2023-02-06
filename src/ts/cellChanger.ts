@@ -7,7 +7,7 @@ import { pieceStateChanger2 } from "./pieceStateChanger";
 export const cellChanger = (name: string, column: number, row: number, tmpChangeCellBox: string[], props3: react.Dispatch<react.SetStateAction<any>>, props4: any) => {
     console.log(tmpChangeCellBox)
     const max: number = tmpChangeCellBox.length
-    for (let i = 1 ; i < tmpChangeCellBox.length - 1 ; i++) {
+    for (let i = 1 ; i < max - 1 ; i++) {
         const id = document.getElementById(tmpChangeCellBox[i]) as HTMLTableElement;
         if (tmpChangeCellBox[i] === String(column) + String(row)) {
             const oldBoard = props4.board
@@ -22,8 +22,6 @@ export const cellChanger = (name: string, column: number, row: number, tmpChange
             //promotion
             if (tmpChangeCellBox[max - 1].indexOf("BP") !== -1 && column === 7) {
                 packageBQ.push(new Pieces("BQ" + packageBQ.length, false, false, false, false, false, false, false, false))
-                console.log(packageBQ)
-                console.log(packageBQ.length)
                 for (let i = 0 ; i < packageBP.length ; i++) {
                     if (packageBP[i].name === name) {
                         packageBP.splice(i, 1);
@@ -33,8 +31,6 @@ export const cellChanger = (name: string, column: number, row: number, tmpChange
             }
             if (tmpChangeCellBox[max - 1].indexOf("WP") !== -1 && column === 0) {
                 packageWQ.push(new Pieces("WQ" + packageWQ.length, false, false, false, false, false, false, false, false))
-                console.log(packageWQ)
-                console.log(packageWQ.length)
                 for (let i = 0 ; i < packageWP.length ; i++) {
                     if (packageWP[i].name === name) {
                         packageWP.splice(i, 1);
@@ -50,7 +46,6 @@ export const cellChanger = (name: string, column: number, row: number, tmpChange
                 board: oldBoard,
             })
         }
-        console.log(tmpChangeCellBox[max - 1])
         id.classList.remove("red")
     }
     props3({
@@ -58,8 +53,3 @@ export const cellChanger = (name: string, column: number, row: number, tmpChange
         isClicked: !props4.isClicked
     })
 }
-
-// export const cellChanger = () => {
-//     console.log("cellchanger")
-    
-// }

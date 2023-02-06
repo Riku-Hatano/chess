@@ -1,6 +1,7 @@
 import react from "react"
 import Pieces from "../ts/pieces";
 import { Pawn, Knight, Rook, Bishop, Queen, King } from "../ts/moves";
+import { PawnMove } from "./each_moves/pawn";
 import { cellChanger } from "./cellChanger";
 
 let tmpCell: string[]
@@ -12,7 +13,7 @@ const HandleChange = (piece: string, column: number, row: number, props2: string
         tmpCell = []
         return
     } 
-    if (props4.board[column][row] === " ") {
+    if (piece === " ") {
         console.log("nothing")
         tmpCell = []
         props3 ({
@@ -24,6 +25,7 @@ const HandleChange = (piece: string, column: number, row: number, props2: string
 
     if (piece[1] === "P") {
         tmpCell = Pawn(column, row, piece, props3, props4); //Pawn in included in moves.ts
+        // tmpCell = PawnMove(column, row, piece, props3, props4);
     } else if (piece[1] === "N") {
         tmpCell = Knight(column, row, piece, props3, props4); //Knight is included moves.ts
     } else if (piece[1] === "R") {
@@ -33,7 +35,7 @@ const HandleChange = (piece: string, column: number, row: number, props2: string
     } else if (piece[1] === "Q") {
         tmpCell = Queen(column, row, piece, props3, props4);
     } else if (piece[1] === "K") {
-        King(column, row, piece);
+        tmpCell = King(column, row, piece, props3, props4);
     } else {
         console.log("error")
     }
@@ -48,7 +50,7 @@ const HandleChange = (piece: string, column: number, row: number, props2: string
         ...props4,
         isClicked: !props4.isClicked,
     })
-    console.log(!props4.isClicked)
+    // console.log(!props4.isClicked)
     // console.log(!props4.isClicked)
 }
 

@@ -5,6 +5,7 @@ import { KnightMove } from "./each_moves/knight";
 import { PawnMove } from "./each_moves/pawn";
 import { RookMove } from "./each_moves/rook";
 import { QueenMove } from "./each_moves/queen";
+import { KingMove } from "./each_moves/king";
 // import { packageP, packageR, packageN, packageB, packageK, packageQ } from "./pieces";
 
 export const Pawn = (column: number, row: number, name: string, props3: react.Dispatch<react.SetStateAction<any>>, props4: any): string[] => {
@@ -31,9 +32,9 @@ export const Queen = (column: number, row: number, name: string, props3: react.D
     console.log(QueenMove(column, row, name, props3, props4))
     return QueenMove(column, row, name, props3, props4)
 }
-
-export const King = (column: number, row: number, piece: string) => {
-    console.log("king")
+export const King = (column: number, row: number, name: string, props3: react.Dispatch<react.SetStateAction<any>>, props4: any): string[] => {
+    console.log(KingMove(column, row, name, props3, props4))
+    return KingMove(column, row, name, props3, props4)
 }
 
 //delete this file later. it is faster to access to each move directly from handleChange.ts

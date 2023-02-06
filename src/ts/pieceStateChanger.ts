@@ -6,7 +6,7 @@ export const pieceStateChanger = (name: string) => {
         for (let i = 0 ; i < packageBP.length ; i++) {
             if (packageBP[i].name === name) {
                 packageBP[i].isSelected = true;
-                console.log(packageBP[i])
+                // console.log(packageBP[i])
                 return packageBP[i]
             }
         }
@@ -14,7 +14,7 @@ export const pieceStateChanger = (name: string) => {
         for (let i = 0 ; i < packageWP.length ; i++) {
             if (packageWP[i].name === name) {
                 packageWP[i].isSelected = true;
-                console.log(packageWP[i])
+                // console.log(packageWP[i])
                 return packageWP[i]
             }
         }
