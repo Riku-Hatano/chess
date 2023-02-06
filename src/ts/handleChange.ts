@@ -27,11 +27,11 @@ const HandleChange = (piece: string, column: number, row: number, props2: string
     } else if (piece[1] === "N") {
         tmpCell = Knight(column, row, piece, props3, props4); //Knight is included moves.ts
     } else if (piece[1] === "R") {
-        tmpCell = Rook(column, row, piece, props3, props4);
+        tmpCell = Rook(column, row, piece, props3, props4); //Rook is included rook.ts
     } else if (piece[1] === "B") {
-        tmpCell = Bishop(column, row, piece, props3, props4);
+        tmpCell = Bishop(column, row, piece, props3, props4); //Bishop is included bishop.ts
     } else if (piece[1] === "Q") {
-        Queen(column, row, piece);
+        tmpCell = Queen(column, row, piece, props3, props4);
     } else if (piece[1] === "K") {
         King(column, row, piece);
     } else {

@@ -1,4 +1,3 @@
-import './App.css';
 import Board from "./tsx/board"
 import "./css/board.css"
 
